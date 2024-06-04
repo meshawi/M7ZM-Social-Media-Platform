@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./assets/uciLogo.png" />
+    <title>Welcome to M7zm</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNavbar">
+      <div class="container">
+        <a class="navbar-brand" href="#">M7zm</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#hero"
+                >Welcome <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/home.php">Home</a>
+            </li>
+          </ul>
+          <div class="col-md-4 text-md-end">
+            <a href="./pages/register.php" class="btn btn-danger">Register</a>
+            <a href="./pages/login.php" class="btn btn-primary">Login</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="welcome-container">
+        <!-- Vertical Section on the Left -->
+        <div class="vertical-section">
+          <div class="trjmhContainer">
+            <h1>Character Translator</h1>
+            <textarea id="inputText" placeholder="Enter text here...">
+6' 9' th ch sh</textarea
+            >
+            <button
+              class="btnA"
+              id="switchButton"
+              onclick="switchTranslationDirection()"
+            >
+              Switch Translation Direction
+            </button>
+            <button class="btnA" id="translateButton" onclick="translateText()">
+              Translate
+            </button>
+            <textarea
+              id="outputText"
+              placeholder="Translated text will appear here..."
+              readonly
+            ></textarea>
+          </div>
+        </div>
+        <!-- Horizontal Sections on the Right -->
+        <div class="d-flex flex-column flex-grow-1">
+          <div id="videoContainer" class="horizontal-section">
+            <h2 style="margin-bottom: 20px; text-align: center">
+              Random Videos
+            </h2>
+            <div id="videoList"></div>
+          </div>
+          <div class="cube-loader">
+            <div class="cube-top"></div>
+            <div class="cube-wrapper">
+              <span style="--i: 0" class="cube-span"></span>
+              <span style="--i: 1" class="cube-span"></span>
+              <span style="--i: 2" class="cube-span"></span>
+              <span style="--i: 3" class="cube-span"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+      // Function to fetch and display random videos
+      function fetchRandomVideos() {
+        fetch("./backend/fetch_public_videos.php")
+          .then((response) => response.json())
+          .then((videos) => {
+            // Shuffle the videos array to get random order
+            videos = videos.sort(() => Math.random() - 0.5).slice(0, 2); // Displaying 3 random videos
+
+            // Display the videos in the videoList container
+            const videoListContainer = document.getElementById("videoList");
+            videoListContainer.innerHTML = "";
+            videos.forEach((videoPath) => {
+              const videoElement = document.createElement("video");
+              videoElement.src = videoPath;
+              videoElement.controls = true;
+              videoListContainer.appendChild(videoElement);
+            });
+          })
+          .catch((error) => {
+            console.error("Error fetching videos:", error);
+          });
+      }
+
+      // Call fetchRandomVideos function when the page loads
+      window.onload = fetchRandomVideos;
+
+      var currentTranslationDirection = "en-ar";
+      function switchTranslationDirection() {
+        var switchButton = document.getElementById("switchButton");
+        if (currentTranslationDirection === "en-ar") {
+          currentTranslationDirection = "ar-en";
+          switchButton.innerHTML = "Translate Arabic to English";
+        } else {
+          currentTranslationDirection = "en-ar";
+          switchButton.innerHTML = "Translate English to Arabic";
+        }
+        document.getElementById("outputText").value = ""; // Clear output when switching direction
+      }
+
+      function translateText() {
+        var inputText = document.getElementById("inputText").value;
+        var outputText = "";
+        var enToArTranslationMap = {
+          2: "ى",
+          3: "ع",
+          4: "ذ",
+          5: "خ",
+          6: "ط",
+          7: "ح",
+          8: "ق",
+          9: "ص",
+          a: "ا",
+          b: "ب",
+          c: "س",
+          d: "د",
+          e: "ي",
+          f: "ف",
+          g: "ق",
+          h: "ه",
+          i: "ي",
+          j: "ج",
+          k: "ك",
+          l: "ل",
+          m: "م",
+          n: "ن",
+          o: "و",
+          p: "ب",
+          q: "ك",
+          r: "ر",
+          s: "س",
+          t: "ت",
+          u: "و",
+          v: "ڤ",
+          w: "و",
+          x: "اكس",
+          y: "ي",
+          z: "ز",
+          sh: "ش",
+          th: "ث",
+          "3'": "غ",
+          "6'": "ض",
+          "9'": "ظ",
+        };
+        var arToEnTranslationMap = {
+          ى: "2",
+          ع: "3",
+          ذ: "4",
+          خ: "5",
+          ط: "6",
+          ح: "7",
+          ق: "8",
+          ص: "9",
+          ا: "a",
+          ب: "b",
+          س: "c",
+          د: "d",
+          ي: "e",
+          ف: "f",
+          ق: "g",
+          ه: "h",
+          ي: "i",
+          ج: "j",
+          ك: "k",
+          ل: "l",
+          م: "m",
+          ن: "n",
+          و: "o",
+          ب: "p",
+          ك: "q",
+          ر: "r",
+          س: "s",
+          ت: "t",
+          و: "u",
+          ڤ: "v",
+          و: "w",
+          اكس: "x",
+          ي: "y",
+          ز: "z",
+          ش: "sh",
+          ث: "th",
+          ض: "6'",
+          ظ: "9'",
+        };
+
+        var translationMap =
+          currentTranslationDirection === "en-ar"
+            ? enToArTranslationMap
+            : arToEnTranslationMap;
+        for (var i = 0; i < inputText.length; i++) {
+          var translatedChar = translationMap[inputText.substring(i, i + 2)];
+          if (translatedChar) {
+            outputText += translatedChar;
+            i++; // Skip next character due to two-character mapping
+          } else {
+            translatedChar = translationMap[inputText[i]];
+            outputText += translatedChar ? translatedChar : inputText[i];
+          }
+        }
+        document.getElementById("outputText").value = outputText;
+      }
+    </script>
+  </body>
+</html>

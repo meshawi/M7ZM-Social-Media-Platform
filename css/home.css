@@ -1,0 +1,231 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #121212;
+  color: #fff;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  z-index: 2;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  background-image: url("../assets/M7ZM.png");
+  /* Path to your background image */
+  background-size: cover;
+  background-position: center;
+  animation: fadeBackground 9s ease-out forwards;
+}
+
+@keyframes fadeBackground {
+  0% {
+    background-color: black;
+    opacity: 0;
+  }
+
+  100% {
+    background-color: transparent;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero h1,
+.hero p {
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.hero h1 {
+  animation-delay: 0.2s;
+  color: var(--accent-primary);
+}
+
+.hero p {
+  animation-delay: 1s;
+  color: var(--text-secondary);
+}
+.hero span {
+  color: var(--text-secondary);
+}
+.btn-main {
+  background: #e0a80d;
+  color: #000;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  transition: background 0.5s;
+}
+
+.btn-main:hover {
+  background: var(--accent-secondary);
+}
+
+#features {
+  padding-top: 5vh;
+  height: 100vh;
+}
+
+.animation-container {
+  width: 100%;
+  height: 20%;
+  /* half the height of the features section */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.animation-container2 {
+  max-width: 40%;
+  height: 50%;
+  /* half the height of the features section */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feature-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem 0;
+}
+
+.feature-tile {
+  /* Remove img styles */
+  position: relative;
+  /* Ensure the container is positioned relative */
+  padding: 1rem;
+  border-radius: 8px;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s;
+  background-size: cover;
+  /* Adjusted property */
+  background-position: center;
+  /* Center the background image */
+}
+
+.feature-tile::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Remove background image */
+  background-size: cover;
+  /* Ensure the image covers the entire tile */
+  background-position: center;
+  /* Center the background image */
+  border-radius: inherit;
+  filter: blur(2px);
+  /* Add this line for blur effect */
+  z-index: -1;
+  /* Ensure the pseudo-element is behind the content */
+}
+
+.feature-tile:hover {
+  transform: scale(1.1);
+}
+
+.feature-tile img {
+  width: 80%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.feature-tile h3 {
+  color: var(--accent-primary);
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.feature-tile p {
+  font-size: 15px;
+  text-align: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.feature-tile:hover .overlay {
+  opacity: 1;
+}
+
+.overlay-content {
+  text-align: center;
+}
+
+.overlay-content p {
+  margin: 0;
+}
+
+.overlay-content a {
+  color: #e0a80d;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.chat {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-success {
+  width: 150px;
+  height: 100px;
+  font-size: 25px;
+  text-align: center;
+  border-radius: 14px;
+}
+#mainNavbar {
+  transition: top 0.3s;
+  top: -100px;
+  /* Initially hide the navbar */
+}

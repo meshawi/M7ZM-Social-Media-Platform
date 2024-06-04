@@ -1,0 +1,92 @@
+@import url("GloabalStyles.css");
+:root {
+    /* Color Scheme */
+    /* Dark Background Shades */
+    --dark-bg-primary: #121212; /* Primary dark background for a luxurious feel */
+    --dark-bg-secondary: #222831; /* Secondary dark background for a luxurious feel */
+    --dark-bg-tertiary: #393e46; /* Tertiary dark background for a luxurious feel */
+  
+    /* Text Colors */
+    --text-primary: #ffffff; /* Primary white text for contrast */
+    --text-secondary: #eeeeee; /* Secondary white text for slightly less contrast */
+  
+    /* Accent Colors */
+    --accent-primary: #0dcaf0; /* Bright blue for primary accents */
+    --accent-secondary: #fd7014; /* Orange for secondary accents */
+  
+    /* Card Background */
+    --card-bg-color: #333333; /* Dark gray for card backgrounds */
+  
+    /* Typography */
+    --heading-font: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    --body-font: "Arial", sans-serif;
+  
+    /* Borders and Shadows */
+    --border-radius: 8px; /* Rounded corners for elements */
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--dark-bg-primary); 
+  color: #fff;
+}
+
+:root {
+    /* Color Scheme */
+    /* Dark Background Shades */
+    --dark-bg-primary: #121212; /* Primary dark background for a luxurious feel */
+    --dark-bg-secondary: #222831; /* Secondary dark background for a luxurious feel */
+    --dark-bg-tertiary: #393e46; /* Tertiary dark background for a luxurious feel */
+  
+    /* Text Colors */
+    --text-primary: #ffffff; /* Primary white text for contrast */
+    --text-secondary: #eeeeee; /* Secondary white text for slightly less contrast */
+  
+    /* Accent Colors */
+    --accent-primary: #0dcaf0; /* Bright blue for primary accents */
+    --accent-secondary: #fd7014; /* Orange for secondary accents */
+  
+    /* Card Background */
+    --card-bg-color: #333333; /* Dark gray for card backgrounds */
+  
+    /* Typography */
+    --heading-font: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    --body-font: "Arial", sans-serif;
+  
+    /* Borders and Shadows */
+    --border-radius: 8px; /* Rounded corners for elements */
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  .gallery-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 12px;
+} .gallery-image:hover {
+    opacity: 0.7;
+}
+
+.tag-checkbox {
+    appearance: none;
+    /* Remove default appearance */
+    position: absolute;
+    /* Take out of the flow */
+    opacity: 0;
+    /* Hide visually */
+}
+.modal-content{
+    background: var(--dark-bg-tertiary);
+}.one-line-img{
+    display: flex;
+    flex-direction: row;
+    text-transform: capitalize;
+    align-items: center;
+}
+.creator-name{
+    margin-left: 1rem;
+    font-weight: bold;
+}

@@ -1,0 +1,61 @@
+@import url("GloabalStyles.css");
+:root {
+    /* Color Scheme */
+    /* Dark Background Shades */
+    --dark-bg-primary: #121212; /* Primary dark background for a luxurious feel */
+    --dark-bg-secondary: #222831; /* Secondary dark background for a luxurious feel */
+    --dark-bg-tertiary: #393e46; /* Tertiary dark background for a luxurious feel */
+  
+    /* Text Colors */
+    --text-primary: #ffffff; /* Primary white text for contrast */
+    --text-secondary: #eeeeee; /* Secondary white text for slightly less contrast */
+  
+    /* Accent Colors */
+    --accent-primary: #0dcaf0; /* Bright blue for primary accents */
+    --accent-secondary: #fd7014; /* Orange for secondary accents */
+  
+    /* Card Background */
+    --card-bg-color: #333333; /* Dark gray for card backgrounds */
+  
+    /* Typography */
+    --heading-font: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    --body-font: "Arial", sans-serif;
+  
+    /* Borders and Shadows */
+    --border-radius: 8px; /* Rounded corners for elements */
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--dark-bg-primary); 
+  color: #fff;
+}
+
+
+.container {
+    background: var(--card-bg-color);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-control {
+    border-radius: 0.375rem;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.btn-primaryS {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+.title{
+    color: var(--accent-secondary);
+}

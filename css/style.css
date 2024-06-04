@@ -1,0 +1,623 @@
+@import url("GloabalStyles.css");
+:root {
+  /* Color Scheme */
+  /* Dark Background Shades */
+  --dark-bg-primary: #121212; /* Primary dark background for a luxurious feel */
+  --dark-bg-secondary: #222831; /* Secondary dark background for a luxurious feel */
+  --dark-bg-tertiary: #393e46; /* Tertiary dark background for a luxurious feel */
+
+  /* Text Colors */
+  --text-primary: #ffffff; /* Primary white text for contrast */
+  --text-secondary: #eeeeee; /* Secondary white text for slightly less contrast */
+
+  /* Accent Colors */
+  --accent-primary: #0dcaf0; /* Bright blue for primary accents */
+  --accent-secondary: #fd7014; /* Orange for secondary accents */
+
+  /* Card Background */
+  --card-bg-color: #333333; /* Dark gray for card backgrounds */
+
+  /* Typography */
+  --heading-font: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --body-font: "Arial", sans-serif;
+
+  /* Borders and Shadows */
+  --border-radius: 8px; /* Rounded corners for elements */
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("../assets/welcomeBG.jpg") no-repeat center center;
+  background-size: cover;
+}
+.welcome-container {
+  display: flex;
+  color: #fff;
+  padding: 2rem;
+  background-image: linear-gradient(
+      200deg,
+      rgba(213, 213, 213, 0.01) 0%,
+      rgba(213, 213, 213, 0.01) 14.286%,
+      rgba(140, 140, 140, 0.01) 14.286%,
+      rgba(140, 140, 140, 0.01) 28.572%,
+      rgba(52, 52, 52, 0.01) 28.572%,
+      rgba(52, 52, 52, 0.01) 42.858%,
+      rgba(38, 38, 38, 0.01) 42.858%,
+      rgba(38, 38, 38, 0.01) 57.144%,
+      rgba(159, 159, 159, 0.01) 57.144%,
+      rgba(159, 159, 159, 0.01) 71.42999999999999%,
+      rgba(71, 71, 71, 0.01) 71.43%,
+      rgba(71, 71, 71, 0.01) 85.71600000000001%,
+      rgba(88, 88, 88, 0.01) 85.716%,
+      rgba(88, 88, 88, 0.01) 100.002%
+    ),
+    linear-gradient(
+      337deg,
+      rgba(25, 25, 25, 0.01) 0%,
+      rgba(25, 25, 25, 0.01) 12.5%,
+      rgba(150, 150, 150, 0.01) 12.5%,
+      rgba(150, 150, 150, 0.01) 25%,
+      rgba(84, 84, 84, 0.01) 25%,
+      rgba(84, 84, 84, 0.01) 37.5%,
+      rgba(85, 85, 85, 0.01) 37.5%,
+      rgba(85, 85, 85, 0.01) 50%,
+      rgba(188, 188, 188, 0.01) 50%,
+      rgba(188, 188, 188, 0.01) 62.5%,
+      rgba(80, 80, 80, 0.01) 62.5%,
+      rgba(80, 80, 80, 0.01) 75%,
+      rgba(73, 73, 73, 0.01) 75%,
+      rgba(73, 73, 73, 0.01) 87.5%,
+      rgba(219, 219, 219, 0.01) 87.5%,
+      rgba(219, 219, 219, 0.01) 100%
+    ),
+    linear-gradient(
+      203deg,
+      rgba(233, 233, 233, 0.01) 0%,
+      rgba(233, 233, 233, 0.01) 25%,
+      rgba(114, 114, 114, 0.01) 25%,
+      rgba(114, 114, 114, 0.01) 50%,
+      rgba(164, 164, 164, 0.01) 50%,
+      rgba(164, 164, 164, 0.01) 75%,
+      rgba(228, 228, 228, 0.01) 75%,
+      rgba(228, 228, 228, 0.01) 100%
+    ),
+    linear-gradient(
+      317deg,
+      rgba(139, 139, 139, 0.02) 0%,
+      rgba(139, 139, 139, 0.02) 16.667%,
+      rgba(44, 44, 44, 0.02) 16.667%,
+      rgba(44, 44, 44, 0.02) 33.334%,
+      rgba(166, 166, 166, 0.02) 33.334%,
+      rgba(166, 166, 166, 0.02) 50.001000000000005%,
+      rgba(2, 2, 2, 0.02) 50.001%,
+      rgba(2, 2, 2, 0.02) 66.668%,
+      rgba(23, 23, 23, 0.02) 66.668%,
+      rgba(23, 23, 23, 0.02) 83.33500000000001%,
+      rgba(21, 21, 21, 0.02) 83.335%,
+      rgba(21, 21, 21, 0.02) 100.002%
+    ),
+    linear-gradient(
+      328deg,
+      rgba(3, 3, 3, 0.03) 0%,
+      rgba(3, 3, 3, 0.03) 12.5%,
+      rgba(116, 116, 116, 0.03) 12.5%,
+      rgba(116, 116, 116, 0.03) 25%,
+      rgba(214, 214, 214, 0.03) 25%,
+      rgba(214, 214, 214, 0.03) 37.5%,
+      rgba(217, 217, 217, 0.03) 37.5%,
+      rgba(217, 217, 217, 0.03) 50%,
+      rgba(68, 68, 68, 0.03) 50%,
+      rgba(68, 68, 68, 0.03) 62.5%,
+      rgba(118, 118, 118, 0.03) 62.5%,
+      rgba(118, 118, 118, 0.03) 75%,
+      rgba(200, 200, 200, 0.03) 75%,
+      rgba(200, 200, 200, 0.03) 87.5%,
+      rgba(198, 198, 198, 0.03) 87.5%,
+      rgba(198, 198, 198, 0.03) 100%
+    ),
+    linear-gradient(
+      97deg,
+      rgba(195, 195, 195, 0.03) 0%,
+      rgba(195, 195, 195, 0.03) 16.667%,
+      rgba(177, 177, 177, 0.03) 16.667%,
+      rgba(177, 177, 177, 0.03) 33.334%,
+      rgba(170, 170, 170, 0.03) 33.334%,
+      rgba(170, 170, 170, 0.03) 50.001000000000005%,
+      rgba(158, 158, 158, 0.03) 50.001%,
+      rgba(158, 158, 158, 0.03) 66.668%,
+      rgba(121, 121, 121, 0.03) 66.668%,
+      rgba(121, 121, 121, 0.03) 83.33500000000001%,
+      rgba(146, 146, 146, 0.03) 83.335%,
+      rgba(146, 146, 146, 0.03) 100.002%
+    ),
+    linear-gradient(
+      268deg,
+      rgba(103, 103, 103, 0.03) 0%,
+      rgba(103, 103, 103, 0.03) 25%,
+      rgba(112, 112, 112, 0.03) 25%,
+      rgba(112, 112, 112, 0.03) 50%,
+      rgba(4, 4, 4, 0.03) 50%,
+      rgba(4, 4, 4, 0.03) 75%,
+      rgba(227, 227, 227, 0.03) 75%,
+      rgba(227, 227, 227, 0.03) 100%
+    ),
+    linear-gradient(90deg, hsl(98, 0%, 0%), hsl(98, 0%, 0%));
+  border-radius: 10px;
+}
+.vertical-section {
+  flex: 1;
+  margin-right: 2rem;
+  padding: 2rem;
+  background-image: linear-gradient(
+      323deg,
+      rgba(255, 255, 255, 0.01) 0%,
+      rgba(255, 255, 255, 0.01) 16.667%,
+      rgba(46, 46, 46, 0.01) 16.667%,
+      rgba(46, 46, 46, 0.01) 33.334%,
+      rgba(226, 226, 226, 0.01) 33.334%,
+      rgba(226, 226, 226, 0.01) 50.001000000000005%,
+      rgba(159, 159, 159, 0.01) 50.001%,
+      rgba(159, 159, 159, 0.01) 66.668%,
+      rgba(149, 149, 149, 0.01) 66.668%,
+      rgba(149, 149, 149, 0.01) 83.33500000000001%,
+      rgba(43, 43, 43, 0.01) 83.335%,
+      rgba(43, 43, 43, 0.01) 100.002%
+    ),
+    linear-gradient(
+      346deg,
+      rgba(166, 166, 166, 0.03) 0%,
+      rgba(166, 166, 166, 0.03) 25%,
+      rgba(240, 240, 240, 0.03) 25%,
+      rgba(240, 240, 240, 0.03) 50%,
+      rgba(121, 121, 121, 0.03) 50%,
+      rgba(121, 121, 121, 0.03) 75%,
+      rgba(40, 40, 40, 0.03) 75%,
+      rgba(40, 40, 40, 0.03) 100%
+    ),
+    linear-gradient(
+      347deg,
+      rgba(209, 209, 209, 0.01) 0%,
+      rgba(209, 209, 209, 0.01) 25%,
+      rgba(22, 22, 22, 0.01) 25%,
+      rgba(22, 22, 22, 0.01) 50%,
+      rgba(125, 125, 125, 0.01) 50%,
+      rgba(125, 125, 125, 0.01) 75%,
+      rgba(205, 205, 205, 0.01) 75%,
+      rgba(205, 205, 205, 0.01) 100%
+    ),
+    linear-gradient(
+      84deg,
+      rgba(195, 195, 195, 0.01) 0%,
+      rgba(195, 195, 195, 0.01) 14.286%,
+      rgba(64, 64, 64, 0.01) 14.286%,
+      rgba(64, 64, 64, 0.01) 28.572%,
+      rgba(67, 67, 67, 0.01) 28.572%,
+      rgba(67, 67, 67, 0.01) 42.858%,
+      rgba(214, 214, 214, 0.01) 42.858%,
+      rgba(214, 214, 214, 0.01) 57.144%,
+      rgba(45, 45, 45, 0.01) 57.144%,
+      rgba(45, 45, 45, 0.01) 71.42999999999999%,
+      rgba(47, 47, 47, 0.01) 71.43%,
+      rgba(47, 47, 47, 0.01) 85.71600000000001%,
+      rgba(172, 172, 172, 0.01) 85.716%,
+      rgba(172, 172, 172, 0.01) 100.002%
+    ),
+    linear-gradient(
+      73deg,
+      rgba(111, 111, 111, 0.03) 0%,
+      rgba(111, 111, 111, 0.03) 16.667%,
+      rgba(202, 202, 202, 0.03) 16.667%,
+      rgba(202, 202, 202, 0.03) 33.334%,
+      rgba(57, 57, 57, 0.03) 33.334%,
+      rgba(57, 57, 57, 0.03) 50.001000000000005%,
+      rgba(197, 197, 197, 0.03) 50.001%,
+      rgba(197, 197, 197, 0.03) 66.668%,
+      rgba(97, 97, 97, 0.03) 66.668%,
+      rgba(97, 97, 97, 0.03) 83.33500000000001%,
+      rgba(56, 56, 56, 0.03) 83.335%,
+      rgba(56, 56, 56, 0.03) 100.002%
+    ),
+    linear-gradient(
+      132deg,
+      rgba(88, 88, 88, 0.03) 0%,
+      rgba(88, 88, 88, 0.03) 20%,
+      rgba(249, 249, 249, 0.03) 20%,
+      rgba(249, 249, 249, 0.03) 40%,
+      rgba(2, 2, 2, 0.03) 40%,
+      rgba(2, 2, 2, 0.03) 60%,
+      rgba(185, 185, 185, 0.03) 60%,
+      rgba(185, 185, 185, 0.03) 80%,
+      rgba(196, 196, 196, 0.03) 80%,
+      rgba(196, 196, 196, 0.03) 100%
+    ),
+    linear-gradient(
+      142deg,
+      rgba(160, 160, 160, 0.03) 0%,
+      rgba(160, 160, 160, 0.03) 12.5%,
+      rgba(204, 204, 204, 0.03) 12.5%,
+      rgba(204, 204, 204, 0.03) 25%,
+      rgba(108, 108, 108, 0.03) 25%,
+      rgba(108, 108, 108, 0.03) 37.5%,
+      rgba(191, 191, 191, 0.03) 37.5%,
+      rgba(191, 191, 191, 0.03) 50%,
+      rgba(231, 231, 231, 0.03) 50%,
+      rgba(231, 231, 231, 0.03) 62.5%,
+      rgba(70, 70, 70, 0.03) 62.5%,
+      rgba(70, 70, 70, 0.03) 75%,
+      rgba(166, 166, 166, 0.03) 75%,
+      rgba(166, 166, 166, 0.03) 87.5%,
+      rgba(199, 199, 199, 0.03) 87.5%,
+      rgba(199, 199, 199, 0.03) 100%
+    ),
+    linear-gradient(
+      238deg,
+      rgba(116, 116, 116, 0.02) 0%,
+      rgba(116, 116, 116, 0.02) 20%,
+      rgba(141, 141, 141, 0.02) 20%,
+      rgba(141, 141, 141, 0.02) 40%,
+      rgba(152, 152, 152, 0.02) 40%,
+      rgba(152, 152, 152, 0.02) 60%,
+      rgba(61, 61, 61, 0.02) 60%,
+      rgba(61, 61, 61, 0.02) 80%,
+      rgba(139, 139, 139, 0.02) 80%,
+      rgba(139, 139, 139, 0.02) 100%
+    ),
+    linear-gradient(
+      188deg,
+      rgba(227, 227, 227, 0.01) 0%,
+      rgba(227, 227, 227, 0.01) 20%,
+      rgba(105, 105, 105, 0.01) 20%,
+      rgba(105, 105, 105, 0.01) 40%,
+      rgba(72, 72, 72, 0.01) 40%,
+      rgba(72, 72, 72, 0.01) 60%,
+      rgba(33, 33, 33, 0.01) 60%,
+      rgba(33, 33, 33, 0.01) 80%,
+      rgba(57, 57, 57, 0.01) 80%,
+      rgba(57, 57, 57, 0.01) 100%
+    ),
+    linear-gradient(90deg, hsl(237, 0%, 13%), hsl(237, 0%, 13%));
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Soft shadow effect */
+}
+
+.vertical-section h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.vertical-section textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none; /* Prevent resizing */
+}
+
+.vertical-section button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+
+  background-color: #007bff; /* Blue button color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.vertical-section button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.horizontal-section {
+  flex: 1;
+  padding: 1rem;
+  background-image: linear-gradient(
+      323deg,
+      rgba(255, 255, 255, 0.01) 0%,
+      rgba(255, 255, 255, 0.01) 16.667%,
+      rgba(46, 46, 46, 0.01) 16.667%,
+      rgba(46, 46, 46, 0.01) 33.334%,
+      rgba(226, 226, 226, 0.01) 33.334%,
+      rgba(226, 226, 226, 0.01) 50.001000000000005%,
+      rgba(159, 159, 159, 0.01) 50.001%,
+      rgba(159, 159, 159, 0.01) 66.668%,
+      rgba(149, 149, 149, 0.01) 66.668%,
+      rgba(149, 149, 149, 0.01) 83.33500000000001%,
+      rgba(43, 43, 43, 0.01) 83.335%,
+      rgba(43, 43, 43, 0.01) 100.002%
+    ),
+    linear-gradient(
+      346deg,
+      rgba(166, 166, 166, 0.03) 0%,
+      rgba(166, 166, 166, 0.03) 25%,
+      rgba(240, 240, 240, 0.03) 25%,
+      rgba(240, 240, 240, 0.03) 50%,
+      rgba(121, 121, 121, 0.03) 50%,
+      rgba(121, 121, 121, 0.03) 75%,
+      rgba(40, 40, 40, 0.03) 75%,
+      rgba(40, 40, 40, 0.03) 100%
+    ),
+    linear-gradient(
+      347deg,
+      rgba(209, 209, 209, 0.01) 0%,
+      rgba(209, 209, 209, 0.01) 25%,
+      rgba(22, 22, 22, 0.01) 25%,
+      rgba(22, 22, 22, 0.01) 50%,
+      rgba(125, 125, 125, 0.01) 50%,
+      rgba(125, 125, 125, 0.01) 75%,
+      rgba(205, 205, 205, 0.01) 75%,
+      rgba(205, 205, 205, 0.01) 100%
+    ),
+    linear-gradient(
+      84deg,
+      rgba(195, 195, 195, 0.01) 0%,
+      rgba(195, 195, 195, 0.01) 14.286%,
+      rgba(64, 64, 64, 0.01) 14.286%,
+      rgba(64, 64, 64, 0.01) 28.572%,
+      rgba(67, 67, 67, 0.01) 28.572%,
+      rgba(67, 67, 67, 0.01) 42.858%,
+      rgba(214, 214, 214, 0.01) 42.858%,
+      rgba(214, 214, 214, 0.01) 57.144%,
+      rgba(45, 45, 45, 0.01) 57.144%,
+      rgba(45, 45, 45, 0.01) 71.42999999999999%,
+      rgba(47, 47, 47, 0.01) 71.43%,
+      rgba(47, 47, 47, 0.01) 85.71600000000001%,
+      rgba(172, 172, 172, 0.01) 85.716%,
+      rgba(172, 172, 172, 0.01) 100.002%
+    ),
+    linear-gradient(
+      73deg,
+      rgba(111, 111, 111, 0.03) 0%,
+      rgba(111, 111, 111, 0.03) 16.667%,
+      rgba(202, 202, 202, 0.03) 16.667%,
+      rgba(202, 202, 202, 0.03) 33.334%,
+      rgba(57, 57, 57, 0.03) 33.334%,
+      rgba(57, 57, 57, 0.03) 50.001000000000005%,
+      rgba(197, 197, 197, 0.03) 50.001%,
+      rgba(197, 197, 197, 0.03) 66.668%,
+      rgba(97, 97, 97, 0.03) 66.668%,
+      rgba(97, 97, 97, 0.03) 83.33500000000001%,
+      rgba(56, 56, 56, 0.03) 83.335%,
+      rgba(56, 56, 56, 0.03) 100.002%
+    ),
+    linear-gradient(
+      132deg,
+      rgba(88, 88, 88, 0.03) 0%,
+      rgba(88, 88, 88, 0.03) 20%,
+      rgba(249, 249, 249, 0.03) 20%,
+      rgba(249, 249, 249, 0.03) 40%,
+      rgba(2, 2, 2, 0.03) 40%,
+      rgba(2, 2, 2, 0.03) 60%,
+      rgba(185, 185, 185, 0.03) 60%,
+      rgba(185, 185, 185, 0.03) 80%,
+      rgba(196, 196, 196, 0.03) 80%,
+      rgba(196, 196, 196, 0.03) 100%
+    ),
+    linear-gradient(
+      142deg,
+      rgba(160, 160, 160, 0.03) 0%,
+      rgba(160, 160, 160, 0.03) 12.5%,
+      rgba(204, 204, 204, 0.03) 12.5%,
+      rgba(204, 204, 204, 0.03) 25%,
+      rgba(108, 108, 108, 0.03) 25%,
+      rgba(108, 108, 108, 0.03) 37.5%,
+      rgba(191, 191, 191, 0.03) 37.5%,
+      rgba(191, 191, 191, 0.03) 50%,
+      rgba(231, 231, 231, 0.03) 50%,
+      rgba(231, 231, 231, 0.03) 62.5%,
+      rgba(70, 70, 70, 0.03) 62.5%,
+      rgba(70, 70, 70, 0.03) 75%,
+      rgba(166, 166, 166, 0.03) 75%,
+      rgba(166, 166, 166, 0.03) 87.5%,
+      rgba(199, 199, 199, 0.03) 87.5%,
+      rgba(199, 199, 199, 0.03) 100%
+    ),
+    linear-gradient(
+      238deg,
+      rgba(116, 116, 116, 0.02) 0%,
+      rgba(116, 116, 116, 0.02) 20%,
+      rgba(141, 141, 141, 0.02) 20%,
+      rgba(141, 141, 141, 0.02) 40%,
+      rgba(152, 152, 152, 0.02) 40%,
+      rgba(152, 152, 152, 0.02) 60%,
+      rgba(61, 61, 61, 0.02) 60%,
+      rgba(61, 61, 61, 0.02) 80%,
+      rgba(139, 139, 139, 0.02) 80%,
+      rgba(139, 139, 139, 0.02) 100%
+    ),
+    linear-gradient(
+      188deg,
+      rgba(227, 227, 227, 0.01) 0%,
+      rgba(227, 227, 227, 0.01) 20%,
+      rgba(105, 105, 105, 0.01) 20%,
+      rgba(105, 105, 105, 0.01) 40%,
+      rgba(72, 72, 72, 0.01) 40%,
+      rgba(72, 72, 72, 0.01) 60%,
+      rgba(33, 33, 33, 0.01) 60%,
+      rgba(33, 33, 33, 0.01) 80%,
+      rgba(57, 57, 57, 0.01) 80%,
+      rgba(57, 57, 57, 0.01) 100%
+    ),
+    linear-gradient(90deg, hsl(237, 0%, 13%), hsl(237, 0%, 13%));
+}
+#videoContainer {
+  padding: 20px;
+  border-radius: 10px;
+}
+
+video {
+  width: calc(53.33% - 10px);
+  margin-bottom: 10px;
+}
+
+video:last-child {
+  margin-right: 0;
+}
+
+.video-controls {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  bottom: 10px;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.video-controls button {
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-right: 10px;
+}
+#videoList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.video-controls button:hover {
+  color: #ccc;
+}
+#mainNavbar,
+.dropdown-menu {
+  background-color: rgba(0, 0, 0, 0.85) !important;
+  /* Semi-transparent black background */
+}
+
+.navbar-brand,
+.nav-link,
+.dropdown-item {
+  color: white !important;
+  /* White text for better visibility */
+}
+
+.nav-link:hover,
+.dropdown-item:hover,
+.nav-item.active .nav-link {
+  color: #f0b90b !important;
+  /* Highlight elements on hover with a gold color */
+}
+
+.navbar-toggler {
+  border-color: #f0b90b !important;
+  /* Gold border color for the toggle button */
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23f0b90b' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-nav {
+  width: 100%;
+  justify-content: center;
+  /* Center navigation links */
+}
+
+.nav-item {
+  margin: 0 15px;
+  /* Spacing between nav items */
+}
+
+.dropdown {
+  position: absolute;
+  right: 10px;
+  /* Position the profile image to the right */
+}
+
+.profile-image {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  /* Make the image round */
+  cursor: pointer;
+}
+.cube-loader {
+  position: relative;
+  /* u can choose any size */
+  width: 75px;
+  height: 75px;
+  transform-style: preserve-3d;
+  transform: rotateX(-30deg);
+  animation: animate 4s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotateX(-30deg) rotateY(0);
+  }
+
+  100% {
+    transform: rotateX(-30deg) rotateY(360deg);
+  }
+}
+
+.cube-loader .cube-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* top: 0;
+    left: 0; */
+  transform-style: preserve-3d;
+}
+
+.cube-loader .cube-wrapper .cube-span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* top: 0;
+    left: 0; */
+  /* width 75px / 2 = 37.5px */
+  transform: rotateY(calc(90deg * var(--i))) translateZ(37.5px);
+  background: linear-gradient(
+    to bottom,
+    hsl(330, 3.13%, 25.1%) 0%,
+    hsl(177.27, 21.71%, 32.06%) 5.5%,
+    hsl(176.67, 34.1%, 36.88%) 12.1%,
+    hsl(176.61, 42.28%, 40.7%) 19.6%,
+    hsl(176.63, 48.32%, 43.88%) 27.9%,
+    hsl(176.66, 53.07%, 46.58%) 36.6%,
+    hsl(176.7, 56.94%, 48.91%) 45.6%,
+    hsl(176.74, 62.39%, 50.91%) 54.6%,
+    hsl(176.77, 69.86%, 52.62%) 63.4%,
+    hsl(176.8, 76.78%, 54.08%) 71.7%,
+    hsl(176.83, 83.02%, 55.29%) 79.4%,
+    hsl(176.85, 88.44%, 56.28%) 86.2%,
+    hsl(176.86, 92.9%, 57.04%) 91.9%,
+    hsl(176.88, 96.24%, 57.59%) 96.3%,
+    hsl(176.88, 98.34%, 57.93%) 99%,
+    hsl(176.89, 99.07%, 58.04%) 100%
+  );
+}
+
+.cube-top {
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  background: hsl(330, 3.13%, 25.1%) 0%;
+  /* width 75px / 2 = 37.5px */
+  transform: rotateX(90deg) translateZ(37.5px);
+  transform-style: preserve-3d;
+}
+
+.cube-top::before {
+  content: "";
+  position: absolute;
+  /* u can choose any size */
+  width: 75px;
+  height: 75px;
+  background: hsl(176.61, 42.28%, 40.7%) 19.6%;
+  transform: translateZ(-90px);
+  filter: blur(10px);
+  box-shadow: 0 0 10px #323232, 0 0 20px hsl(176.61, 42.28%, 40.7%) 19.6%,
+    0 0 30px #323232, 0 0 40px hsl(176.61, 42.28%, 40.7%) 19.6%;
+}

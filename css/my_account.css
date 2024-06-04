@@ -1,0 +1,79 @@
+@import url("GloabalStyles.css");
+:root {
+    /* Color Scheme */
+    /* Dark Background Shades */
+    --dark-bg-primary: #121212; /* Primary dark background for a luxurious feel */
+    --dark-bg-secondary: #222831; /* Secondary dark background for a luxurious feel */
+    --dark-bg-tertiary: #393e46; /* Tertiary dark background for a luxurious feel */
+  
+    /* Text Colors */
+    --text-primary: #ffffff; /* Primary white text for contrast */
+    --text-secondary: #eeeeee; /* Secondary white text for slightly less contrast */
+  
+    /* Accent Colors */
+    --accent-primary: #0dcaf0; /* Bright blue for primary accents */
+    --accent-secondary: #fd7014; /* Orange for secondary accents */
+  
+    /* Card Background */
+    --card-bg-color: #333333; /* Dark gray for card backgrounds */
+  
+    /* Typography */
+    --heading-font: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    --body-font: "Arial", sans-serif;
+  
+    /* Borders and Shadows */
+    --border-radius: 8px; /* Rounded corners for elements */
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--dark-bg-primary); 
+  color: #fff;
+}
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #dee2e6;
+}
+.profile-header {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--dark-bg-primary);
+    color: var(--text-secondary);
+    border-radius: 8px;
+    box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.075);
+}
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.2s ease;
+}
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+.stat-item {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+.modal-body video {
+    width: 100%;
+}
+#profileName {
+    color: var(--accent-secondary);
+}
+.bio{
+    color: var(--accent-primary);
+}
+.mdl{
+    background-color: var(--card-bg-color);
+}

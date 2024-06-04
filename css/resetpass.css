@@ -1,0 +1,79 @@
+@import url("GloabalStyles.css");
+:root {
+    /* Color Scheme */
+    /* Dark Background Shades */
+    --dark-bg-primary: #121212; /* Primary dark background for a luxurious feel */
+    --dark-bg-secondary: #222831; /* Secondary dark background for a luxurious feel */
+    --dark-bg-tertiary: #393e46; /* Tertiary dark background for a luxurious feel */
+  
+    /* Text Colors */
+    --text-primary: #ffffff; /* Primary white text for contrast */
+    --text-secondary: #eeeeee; /* Secondary white text for slightly less contrast */
+  
+    /* Accent Colors */
+    --accent-primary: #0dcaf0; /* Bright blue for primary accents */
+    --accent-secondary: #fd7014; /* Orange for secondary accents */
+  
+    /* Card Background */
+    --card-bg-color: #333333; /* Dark gray for card backgrounds */
+  
+    /* Typography */
+    --heading-font: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    --body-font: "Arial", sans-serif;
+  
+    /* Borders and Shadows */
+    --border-radius: 8px; /* Rounded corners for elements */
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--dark-bg-primary);       color: #fff;
+
+}
+
+
+.cardContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Full screen height */
+    margin-top: 30%;
+    /* Remove default margin */
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+    border-radius: 10px;
+    background-color: var(--card-bg-color);
+    /* Rounded corners for the card */
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+    background: linear-gradient(to right, #007bff, #6610f2);
+    /* More vibrant gradient */
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.form-control:focus {
+    border-color: #6610f2;
+    box-shadow: 0 0 0 0.2rem rgba(102, 16, 242, 0.25);
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}

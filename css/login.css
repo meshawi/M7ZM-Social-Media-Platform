@@ -1,0 +1,71 @@
+@import url("GloabalStyles.css");
+:root {
+    /* Color Scheme */
+    /* Dark Background Shades */
+    --dark-bg-primary: #121212; /* Primary dark background for a luxurious feel */
+    --dark-bg-secondary: #222831; /* Secondary dark background for a luxurious feel */
+    --dark-bg-tertiary: #393e46; /* Tertiary dark background for a luxurious feel */
+  
+    /* Text Colors */
+    --text-primary: #ffffff; /* Primary white text for contrast */
+    --text-secondary: #eeeeee; /* Secondary white text for slightly less contrast */
+  
+    /* Accent Colors */
+    --accent-primary: #0dcaf0; /* Bright blue for primary accents */
+    --accent-secondary: #fd7014; /* Orange for secondary accents */
+  
+    /* Card Background */
+    --card-bg-color: #333333; /* Dark gray for card backgrounds */
+  
+    /* Typography */
+    --heading-font: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    --body-font: "Arial", sans-serif;
+  
+    /* Borders and Shadows */
+    --border-radius: 8px; /* Rounded corners for elements */
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--dark-bg-primary); 
+  color: #fff;
+}
+.container {
+    max-width: 400px; /* Restrict the form width for better aesthetics */
+    padding-top: 50px;
+}
+.login-form {
+    background: var(--card-bg-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.login-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+    color: var(--accent-primary);
+}
+.form-label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+.form-control {
+    height: auto;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.25rem;
+}
+.lgbtn {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+}
+.login-form p {
+    margin-top: 20px;
+}
+.text-danger {
+    font-size: 0.875rem;
+}

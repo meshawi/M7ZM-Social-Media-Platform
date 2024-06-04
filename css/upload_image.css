@@ -1,0 +1,96 @@
+@import url("GloabalStyles.css");
+:root {
+  /* Color Scheme */
+  /* Dark Background Shades */
+  --dark-bg-primary: #121212; /* Primary dark background for a luxurious feel */
+  --dark-bg-secondary: #222831; /* Secondary dark background for a luxurious feel */
+  --dark-bg-tertiary: #393e46; /* Tertiary dark background for a luxurious feel */
+
+  /* Text Colors */
+  --text-primary: #ffffff; /* Primary white text for contrast */
+  --text-secondary: #eeeeee; /* Secondary white text for slightly less contrast */
+
+  /* Accent Colors */
+  --accent-primary: #0dcaf0; /* Bright blue for primary accents */
+  --accent-secondary: #fd7014; /* Orange for secondary accents */
+
+  /* Card Background */
+  --card-bg-color: #333333; /* Dark gray for card backgrounds */
+
+  /* Typography */
+  --heading-font: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --body-font: "Arial", sans-serif;
+
+  /* Borders and Shadows */
+  --border-radius: 8px; /* Rounded corners for elements */
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--dark-bg-primary);
+  color: #fff;
+}
+.tag-checkbox + label {
+  cursor: pointer;
+  background-color: #f8f9fa;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  margin-right: 5px;
+}
+
+.tag-checkbox:checked + label {
+  background-color: #007bff;
+  color: white;
+}
+
+.container {
+  padding-top: 50px;
+  /* Extra padding from the top */
+  background-color: var(--card-bg-color);
+  /* Light background for the container */
+  border-radius: 8px;
+  /* Rounded corners for container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow for depth */
+  max-width: 750px;
+  /* Optimal width for form */
+}
+
+.form-label {
+  font-weight: bold;
+  /* Making labels bold for better readability */
+  /* Darker label color for contrast */
+}
+
+.custom-file-input {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.custom-file-label {
+  display: inline-block;
+  cursor: pointer;
+  color: #999;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 10px 15px;
+}
+
+.tag-checkbox {
+  appearance: none;
+  /* Remove default appearance */
+  position: absolute;
+  /* Take out of the flow */
+  opacity: 0;
+  /* Hide visually */
+}

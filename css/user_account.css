@@ -1,0 +1,112 @@
+@import url("GloabalStyles.css");
+:root {
+  /* Color Scheme */
+  /* Dark Background Shades */
+  --dark-bg-primary: #121212; /* Primary dark background for a luxurious feel */
+  --dark-bg-secondary: #222831; /* Secondary dark background for a luxurious feel */
+  --dark-bg-tertiary: #393e46; /* Tertiary dark background for a luxurious feel */
+
+  /* Text Colors */
+  --text-primary: #ffffff; /* Primary white text for contrast */
+  --text-secondary: #eeeeee; /* Secondary white text for slightly less contrast */
+
+  /* Accent Colors */
+  --accent-primary: #0dcaf0; /* Bright blue for primary accents */
+  --accent-secondary: #fd7014; /* Orange for secondary accents */
+
+  /* Card Background */
+  --card-bg-color: #333333; /* Dark gray for card backgrounds */
+
+  /* Typography */
+  --heading-font: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --body-font: "Arial", sans-serif;
+
+  /* Borders and Shadows */
+  --border-radius: 8px; /* Rounded corners for elements */
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--dark-bg-primary);
+  color: #fff;
+}
+.profile-name {
+  color: var(--accent-primary);
+}
+.profile-header {
+  color: #ffffff;
+  border-bottom: 1px solid #eaeaea;
+  padding: 20px;
+  text-align: center;
+}
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+.profile-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.profile-bio {
+  color: #888888;
+  margin-bottom: 20px;
+}
+.profile-stats {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+.profile-stats .stat-item {
+  text-align: center;
+}
+.profile-actions {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.profile-actions button {
+  margin: 0 10px;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+.gallery-item {
+  position: relative;
+  cursor: pointer;
+}
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.overlay:hover {
+  opacity: 1;
+}
+.overlay i {
+  color: #ffffff;
+  font-size: 36px;
+}

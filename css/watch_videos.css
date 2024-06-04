@@ -1,0 +1,59 @@
+@import url("GloabalStyles.css");
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: var(--dark-bg-primary);
+  color: #fff;
+}
+.tag-checkbox {
+    appearance: none;
+    /* Remove default appearance */
+    position: absolute;
+    /* Take out of the flow */
+    opacity: 0;
+    /* Hide visually */
+}
+.card-img-top {
+    height: 180px; /* Fixed height for better alignment */
+    object-fit: cover; /* Ensures the image covers the area */
+}
+.creator-profile {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%; /* Circular images */
+}
+.tag-badge {
+    margin-right: 5px;
+}
+.card{
+    background-color: var(--card-bg-color);
+}
+.card-title{
+    color: var(--accent-secondary);
+    text-align: center;
+}
+.card-text{
+    color: var(--accent-primary);
+}
+.text-details{
+    color: var(--text-primary);
+}
+.one-line-img{
+    display: flex;
+    flex-direction: row;
+    text-transform: capitalize;
+}.one-line{
+    display: flex;
+    flex-direction: row;
+    text-transform: capitalize;
+    justify-content: space-between;
+}
+.creator-name{
+    margin-left: 1rem;
+    font-weight: bold;
+}
+.form-control{
+    border: 2px solid var(--text-secondary);
+}
