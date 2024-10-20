@@ -21,7 +21,7 @@ The M7ZM Social Media Platform is designed to be a private social space for the 
 
 ## Demo
 
-Check out the demo of the project on YouTube: [Demo Video](https://www.youtube.com/your-demo-video-link)
+Check out the demo of the project on YouTube: [Demo Video]()
 
 ### Key Details
 
